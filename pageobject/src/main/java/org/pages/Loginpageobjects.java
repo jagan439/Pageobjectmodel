@@ -7,7 +7,7 @@ public class Loginpageobjects {
 
 	@FindBy(name="uid")
 	public static WebElement username;
-	@FindBy(name="password")
+	@FindBy(xpath="//input[@name='password']")
 	public static WebElement password;
 	@FindBy(name="btnLogin")	
 	public static WebElement submit;

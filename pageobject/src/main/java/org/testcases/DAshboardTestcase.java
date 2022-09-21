@@ -9,13 +9,13 @@ import org.testng.annotations.Test;
 
 public class DAshboardTestcase extends Basemethods {
 
-	@Test
-	public void dashEx() throws InterruptedException {
+	@Test(dataProvider = "readdata")
+	public void dashEx(String [] data) throws InterruptedException {
 		
 		PageFactory.initElements(driver, Loginpageobjects.class);
 		
-		Loginpageobjects.username.sendKeys("1303");
-		Loginpageobjects.password.sendKeys("Guru99");
+		Loginpageobjects.username.sendKeys(data[0]);
+		Loginpageobjects.password.sendKeys(data[1]);
 		Loginpageobjects.submit.click();
 		Thread.sleep(5000);
 		
